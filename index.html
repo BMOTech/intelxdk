@@ -1,0 +1,40 @@
+<!DOCTYPE html><!--HTML5 doctype-->
+<html data-ng-app="demobasics">
+<head>
+	<title>Sistemas Operacionais</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <link href="css/topcoat-mobile-dark.min.css" rel="stylesheet">
+    <link href="css/ngProgress.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+<!--    <link href="css/ng-mobile-menu.css" rel="stylesheet">-->
+    <link href="css/angular-snap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+<!--	<script src='js/jquery.mobile-1.4.0.min.js'></script>-->
+	<script src='js/angular.min.js'></script>
+	<script src='js/angular-resource.min.js'></script>
+	<script src='js/angular-route.min.js'></script>
+	<script src='js/angular-touch.min.js'></script>
+	<script src='js/snap.min.js'></script>
+	<script src='js/angular-snap.js'></script>
+<!--	<script src='js/ng-mobile-menu.js'></script>-->
+	<script src='js/app.js'></script>
+	<script src='js/ngProgress.min.js'></script>
+	<script src='intelxdk.js'></script>
+	<script type="text/javascript">
+		/* This code is used to run as soon as Intel activates */
+		var onDeviceReady=function(){
+		//hide splash screen
+		intel.xdk.device.hideSplashScreen();
+		};
+		document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
+	</script>
+</head>
+<body>
+    <snap-drawer id="menu" data-ng-include="'views/menu.html'"  ng-swipe-left="menuClose()"></snap-drawer>
+    <snap-content id="main">
+        <div id="header" data-ng-include="'views/header.html'"></div>
+        <ng-view></ng-view>
+    </snap-content>
+</body>
+</html>
