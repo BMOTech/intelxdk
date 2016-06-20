@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Home",
+        "href": "#home",
+        "icon" : "fa-home"
+    },
+    {
+        "name": "Sobre",
+        "href": "#list",
+        "icon" : "fa-user"
+    },
+    {
+        "name": "Mobile",
+        "href": "#os",
+        "icon" : "fa-mobile"
+    },
+    {
+        "name": "Desktop",
+        "href": "#desktop",
+        "icon" : "fa-laptop"
+    }
+]
